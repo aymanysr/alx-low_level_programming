@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- *main - main function
+ *main - Entry point
  *
  *Description: function that prints alphabet in lowercase with new line
  *
- *Result: 0 (success)
+ *Return: Always 0 (success)
  */
 
 int main(void)
