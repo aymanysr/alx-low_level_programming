@@ -1,10 +1,11 @@
 #include "main.h"
 
-/*
- * main - Entry point of my code
+/**
+ * main - Entry point of the function main,
  *
+ * Description: prints _putchar followed by a new line.
  *
- * Return: always 0
+ *Return: Always 0
  */
 
 int main(void)
