@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * free_grkd - free tne grid
+ * free_grid - free tne grid
  * @grid: grid of memories
  * @height: int
  * Return: void
