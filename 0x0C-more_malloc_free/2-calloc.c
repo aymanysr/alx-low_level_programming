@@ -1,22 +1,5 @@
 #include "main.h"
-
-/**
- * *_memset - fills memory with a constant byte?
- * @s: pointer to put the constant
- * @b: constant
- * @n: max bytes to use
- * Return: s
- */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = b;
-
-	return (ptr);
-}
+#include <stdlib.h>
 
 /**
  * *_calloc - allocates memory for an array, using malloc
@@ -27,16 +10,18 @@ char *_memset(char *s, char b, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *m;
+	char *m;
+	size_t i;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	m = malloc(sizeof(int) * nmemb);
+	m = malloc(size * nmemb);
 
 	if (m == 0)
 		return (NULL);
 
-	_memset(m, 0, sizeof(int) * nmemb);
+	for (i = 0; i < (nmemb * size); i++)
+		m[i] = 0;
 
 	return (m);
 }
