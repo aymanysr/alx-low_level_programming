@@ -7,11 +7,13 @@ NAME = school
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -Pedantic
 
-all: ${OBJ}
+all: ${NAME}
+
+${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 clean:
-	${RM} *~ ${NAME}
+	${RM} *~ *.swp ${NAME}
 
 oclean:
 	${RM} ${OBJ}
